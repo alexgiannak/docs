@@ -48,6 +48,6 @@ if __name__ == "__main__":
             endpoint=os.getenv("KDBAI_ENDPOINT")
         ),
         stager_config=KdbaiUploadStagerConfig(),
-        uploader_config=KdbaiUploaderConfig(table_name=os.getenv("KDBAI_TABLE"))
+        uploader_config=KdbaiUploaderConfig(database_name=os.environ["KDBAI_DATABASE"], table_name=os.getenv("KDBAI_TABLE"))
     ).run()
 ```
